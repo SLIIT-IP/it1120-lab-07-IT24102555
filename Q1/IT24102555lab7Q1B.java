@@ -1,23 +1,20 @@
 import java.util.Scanner;
-public class IT24102555lab7Q1B{
+public class IT24102555Lab7Q1B{
 public static void main(String[] args){
-   Scanner input = new Scanner(System.in);
-int student=1;
-while(student<=3){
- System.out.println("student"+student);
-int count=0;
-double totalmarks=0;
-String grade ;
-while(count<4){ 
-   System.out.print("Enter marks"+" "+(count+1)+":");
-   double marks = input.nextDouble();
+     Scanner input = new Scanner(System.in);
 
-totalmarks=totalmarks+marks;
-count++;
-}
-double average=totalmarks/4;
+for(int i=1;i<=3;i++){
+    System.out.println("Student"+i);
+    System.out.print("Enter marks:");
 
-System.out.println("The Average is"+average);
+    int mark1 = input.nextInt();
+    int mark2 = input.nextInt();
+    int mark3 = input.nextInt();
+    int mark4 = input.nextInt();
+
+double average =(mark1+mark2+mark3+mark4)/4.0;
+ System.out.println("Average is "+average);
+String grade;
 if(average >= 75){
      grade="Distinction";
 }else if(average >= 50){
@@ -25,9 +22,8 @@ if(average >= 75){
 }else{
      grade="Fail";
 }
-
- System.out.println("The grade of the student is:"+grade);
-student++;
-     }
-  }
+System.out.println("Overall grade is "+grade);
+System.out.println();
+          }
+    }
 }
